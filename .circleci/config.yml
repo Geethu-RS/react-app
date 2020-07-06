@@ -19,7 +19,7 @@ jobs:
       - aws-s3/sync:
           arguments: |
             --cache-control "max-age=86400"
-          from: dist
+          from: build
           overwrite: true
           to: 's3://react-app-new/'
       - run:
@@ -39,7 +39,7 @@ jobs:
       - aws-s3/sync:
           arguments: |
             --cache-control "max-age=86400"
-          from: dist
+          from: build
           overwrite: true
           to: 's3://react-app-new/'
       - run:
