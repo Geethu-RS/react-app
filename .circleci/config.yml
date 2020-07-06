@@ -11,6 +11,9 @@ jobs:
           name: install-dependencies
           command: 'npm install'
       - run:
+          name: install-sass
+          command: 'npm install node-sass'
+      - run:
           name: build-app
           command: 'npm run build'
       - aws-s3/sync:
